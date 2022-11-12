@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 public class DepositCalculator {
-double calculateComplexPercentFunction(double amount, double yearRate, int depositPeriod ) {
+    // Методы лучше отделять пустыми строчками
+    double calculateComplexPercentFunction(double amount, double yearRate, int depositPeriod ) { // На мой взгляд "Function" лишнее в названии
     double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
 
     return findPercent(pay, 2);
-    }
-double calculateSimplePercentFunction(double amount, double yearRate, int depositPeriod) {
+    } // Также лучше вставить пустую строчку ниже
+double calculateSimplePercentFunction(double amount, double yearRate, int depositPeriod) { // Аналогично как и в предыдущем
     return findPercent(amount+amount * yearRate * depositPeriod, 2);
-    }
+    } // Также лучше вставить пустую строчку ниже
 double findPercent(double value, int places) {
     double scaLe = Math.pow(10, places);
 
